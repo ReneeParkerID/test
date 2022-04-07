@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+<h2>Tabs</h2>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Health Informatics')">Health Informatics</button>
+  <button class="tablinks" onclick="openCity(event, 'Emergency Management')">Emergency Management</button>
+  <button class="tablinks" onclick="openCity(event, 'Data Analytics')">Data Analytics</button>
+  <button class="tablinks" onclick="openCity(event, 'Healthcare Data Quality')">Healthcare Data Quality</button>
+  <button class="tablinks" onclick="openCity(event, 'Healthcare Management')">Healthcare Management</button>
+  <button class="tablinks" onclick="openCity(event, 'Health Policy, Law and Compliance')">Health Policy, Law and Compliance</button>
+</div>
+
+<div id="Health Informatics" class="tabcontent">
+  <h3>Health Informatics Certificate</h3>
+  <p>HCA 601, HIN 605, HCA 610 and HIN 615</p>
+  <h4>Courses left for Master of Health Informatics</h4>
+  <p>ABC 101, ABC 102, ABC 103, ABC 104, ABC 105, ABC 106</p>
+  <h4>Courses left for Master of Health Administration</h4>
+  <p>ABC 101, ABC 102, ABC 103, ABC 104, ABC 105, ABC 106</p>
+</div>
+
+<div id="Emergency Management" class="tabcontent">
+  <h3>Emergency Management Certificate</h3>
+  <p>GPH 722, HCA 630, HCA 705, HCA 765</p> 
+  <h4>Courses left for Master of Health Informatics</h4>
+  <p>ABC 101, ABC 102, ABC 103, ABC 104, ABC 105, ABC 106</p>
+  <h4>Courses left for Master of Health Administration</h4>
+  <p>ABC 101, ABC 102, ABC 103, ABC 104, ABC 105, ABC 106</p>
+</div>
+
+<div id="Data Analytics" class="tabcontent">
+  <h3>Data Analytics Certificate</h3>
+  <p>HIN 620, HIN 715, HIN 770 and HIN 775</p>
+  <h4>Courses left for Master of Health Informatics</h4>
+  <p>ABC 101, ABC 102, ABC 103, ABC 104, ABC 105, ABC 106</p>
+  <h4>Courses left for Master of Health Administration</h4>
+  <p>ABC 101, ABC 102, ABC 103, ABC 104, ABC 105, ABC 106</p>
+</div>
+
+<div id="Healthcare Data Quality" class="tabcontent">
+  <h3>Healthcare Data Quality Certificate</h3>
+  <p>HCA 610, HIN 605, HIN 735 and HCA 760</p>
+  <h4>Courses left for Master of Health Informatics</h4>
+  <p>ABC 101, ABC 102, ABC 103, ABC 104, ABC 105, ABC 106</p>
+  <h4>Courses left for Master of Health Administration</h4>
+  <p>ABC 101, ABC 102, ABC 103, ABC 104, ABC 105, ABC 106</p>
+</div>
+
+<div id="Healthcare Management" class="tabcontent">
+  <h3>Healthcare Management Certificate</h3>
+  <p>HCA 601, HCA 630, HCA 720 and HCA 765</p>
+  <h4>Courses left for Master of Health Informatics</h4>
+  <p>ABC 101, ABC 102, ABC 103, ABC 104, ABC 105, ABC 106</p>
+  <h4>Courses left for Master of Health Administration</h4>
+  <p>ABC 101, ABC 102, ABC 103, ABC 104, ABC 105, ABC 106</p>
+</div>
+
+<div id="Health Policy, Law and Compliance" class="tabcontent">
+  <h3>Health Policy, Law and Compliance Certificate</h3>
+  <p>HCA 601, HIN 625, GPH 702 and HCA 630</p>
+  <h4>Courses left for Master of Health Informatics</h4>
+  <p>ABC 101, ABC 102, ABC 103, ABC 104, ABC 105, ABC 106</p>
+  <h4>Courses left for Master of Health Administration</h4>
+  <p>ABC 101, ABC 102, ABC 103, ABC 104, ABC 105, ABC 106</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
